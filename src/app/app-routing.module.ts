@@ -4,6 +4,7 @@ import { ClientRoutingModule } from './client/client-routing.module';
 import { GeneralModule } from './general/general.module';
 import { HomeComponent } from './general/home/home.component';
 import { NotFoundComponent } from './general/not-found/not-found.component';
+import { ProductRoutingModule } from './product/product-routing.module';
 
 
 const routes: Routes = [
@@ -26,7 +27,8 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes),
     GeneralModule,
-    ClientRoutingModule
+    ClientRoutingModule,
+    ProductRoutingModule
   ],
   exports: [RouterModule]
 })
