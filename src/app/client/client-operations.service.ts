@@ -12,6 +12,24 @@ export class ClientOperationsService {
     return this.data;
   }
 
+  getClient(clientId){
+    return this.data.find(client => client._id == clientId);
+  }
+
+  updateClient(client){
+    let currentData = this.getClient(client._id);
+    if(currentData != undefined && currentData != null){
+      currentData.name = client.name;
+      currentData.age = client.age;
+      currentData.balance = client.balance;
+      currentData.company = client.company;
+      currentData.phone = client.phone;
+
+      return true;
+    }
+
+    return false;
+  }
 
   data = [
     {

@@ -8,6 +8,7 @@
               <th>Balance</th>
               <th>Company</th>
               <th>Phone</th>
+              <th>Actions</th>
           </tr>
         </thead>
 
@@ -18,6 +19,9 @@
             <td>{{ client.balance | currency }}</td>
             <td>{{ client.company }}</td>
             <td>{{ client.phone }}</td>
+            <td>
+              <a  href="client/editor/{{client._id}}" class="waves-effect waves-light btn"><i class="material-icons right">edit</i></a>
+            </td>
           </tr>
         </tbody>
       </table>

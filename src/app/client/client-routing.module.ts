@@ -20,7 +20,7 @@ const routes: Routes = [
     component: ClientCreatorComponent
   },
   {
-    path: "client/editor",
+    path: "client/editor/:clientId",  
     component: ClientEditorComponent
   },
 ];

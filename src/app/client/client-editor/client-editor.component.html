@@ -1,1 +1,69 @@
-<p>client-editor works!</p>
+<div class="container">
+    <table class="striped highlight centered responsive-table">
+        <tr>
+            <td>
+                <label for="name">Name</label>
+                <input placeholder="input name here"  type="text" [(ngModel)]="client.name" class="validate">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="age">age</label>
+                <input placeholder="input age here" id="age" type="text" [(ngModel)]="client.age" class="validate">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="balance">balance</label>
+                <input placeholder="input balance here" id="balance" type="text"  [(ngModel)]="client.balance" class="validate">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="company">Company</label>
+                <input placeholder="input company here" id="company" type="text" [(ngModel)]="client.company" class="validate">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="phone">Phone</label>
+                <input placeholder="input phone here" id="phone" type="text" [(ngModel)]="client.phone" class="validate">
+            </td>
+        </tr>
+    </table>
+
+   <br>
+
+   <button class="btn waves-effect waves-light" (click)="updateClient()" type="submit" name="action">Update
+    <i class="material-icons right">edit</i>
+   </button>
+
+   <br><br>
+
+    <fieldset>
+        <legend>List Client</legend>
+
+        <table class="centered">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Balance</th>
+                <th>Company</th>
+                <th>Phone</th>
+            </tr>
+            </thead>
+        
+            <tbody>
+            <tr *ngFor="let client of data">
+                <td>{{ client.name }}</td>
+                <td>{{ client.age }}</td>
+                <td>{{ client.balance | currency }}</td>
+                <td>{{ client.company }}</td>
+                <td>{{ client.phone }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </fieldset>
+  
+</div>
